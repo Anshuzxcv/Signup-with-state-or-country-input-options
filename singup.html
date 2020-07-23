@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./signup.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+   <title>Covidcare</title>
+   <script type="text/JavaScript" src='state.js'></script>
+</head>
+
+<body>
+
+
+   <div class='wrapper container-xl'>
+
+      <div class="signup-page signup-page-default">
+         <div class="header-main">
+            <a class="header-logo" href="#"><img src="./covidcare.png" alt=""></a>
+
+            <h1 class="h2">Sign up for free and be a part of Covidcare</h1>
+
+            <div class="header-login">
+               <span>Already have an account?&nbsp;</span>
+               <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-info dropdown-toggle" data-toggle="dropdown"
+                     aria-haspopup="true" aria-expanded="false">
+                     Log in
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                     <a class="dropdown-item" href="#">Login as customer</a>
+                     <div class="dropdown-divider"></div>
+                     <a class="dropdown-item" href="#">Login as shopkeeper</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="signup-content">
+            <div class="benefits page-body">
+               <h2 class="h3"><i class="fas fa-user-shield"></i> Free account</h2>
+               <p>One free account give you access to everything you need around you.</p>
+               <hr />
+
+               <h2 class="h3"><span class="icon hk-icon-sm hk-icon-deploy"></span><i class="fas fa-cogs"></i>
+                  Information Hub
+               </h2>
+               <p>Get updated information about everything you need to know about COVID-19.</p>
+
+               <h2 class="h3"><span class="icon hk-icon-sm hk-icon-app"></span><i class="fas fa-universal-access"></i>
+                  Accessibility</h2>
+               <p>Order online from shop near you and get your order within the guaranteed delivery time.</p>
+               <hr />
+            </div>
+
+
+            <div class="signup page-sidebar">
+
+               <form class="formDesign" action="/signup" accept-charset="UTF-8" method="post">
+                  <input type="hidden" name="slug" value="login" />
+
+                  <div class="input-group">
+                     <label for="name">
+                        Name
+                        <sup title="Required">*</sup>
+                     </label> <input type="text" name="name" id="name" class="required" autocapitalize="off"
+                        autofocus="autofocus" placeholder="Name" required autofocus />
+                  </div>
+
+                  <div class="input-group">
+                     <label for="email">
+                        Email address
+                        <sup title="Required">*</sup>
+                     </label> <input type="email" name="email" id="email" class="required" autocapitalize="off"
+                        placeholder="Email address" required />
+                  </div>
+
+                  <div class="input-group">
+                     <label for="mobile">
+                        Mobile No.
+                        <sup title="Required">*</sup>
+                     </label> <input type="number" name="mobile" class="mobile" autocapitalize="off"
+                        placeholder="Mobile Number" required />
+                  </div>
+
+                  <div style="font-size: 13px;" class="input-group">
+                     Select State: <select id="listBox" onchange='selct_district(this.value)'></select>
+                     Select District: <select id='secondlist'></select>
+                  </div>
+
+                  <div class="input-group">
+                     <label for="address-line1">
+                        address-line1
+                        <sup title="Required">*</sup>
+                     </label> <input type="text" name="address-line1" id="address-line1" class="required"
+                        autocapitalize="off" autofocus="autofocus" placeholder="address-line1" required />
+                     <p style="font-size: 11px;" class="help-block">Street address, P.O. box, company name, c/o</p>
+                  </div>
+
+                  <div class="input-group">
+                     <label for="address-line2">
+                        address-line2
+                        <sup title="Required">*</sup>
+                     </label> <input type="text" name="address-line2" id="address-line2" class="required"
+                        autocapitalize="off" autofocus="autofocus" placeholder="address-line2" required />
+                     <p style="font-size: 11px;" class="help-block">Apartment, suite , unit, building, floor, etc.</p>
+                  </div>
+
+                  <div class="input-group">
+                     <label for="password">
+                        Password
+                        <sup title="Required">*</sup>
+                     </label> <input type="password" name="password" autocapitalize="off"
+                        placeholder="create your password" required />
+                  </div>
+
+                  <div class="input-group">
+                     <label for="password">
+                        Conform Password
+                        <sup title="Required">*</sup>
+                     </label> <input type="password" name="conformPassword" autocapitalize="off"
+                        placeholder="conform your password" required />
+                  </div>
+
+                  <div class="input-group">
+                     <input type="submit" name="commit" value="Create Free Account"
+                        class="btn buttonn btn-alt full-width btn-primary" data-disable-with="Create Free Account">
+                  </div>
+               </form>
+
+            </div>
+         </div>
+      </div>
+
+   </div>
+
+
+   <script language="javascript">
+      populateCountries("country", "state"); // first parameter is id of country drop-down and second parameter is id of state drop-down
+      populateCountries("country2");
+      populateCountries("country2");
+   </script>
+
+</body>
+
+</html>
